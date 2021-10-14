@@ -139,12 +139,13 @@ I was able to conclude based on my EDA:
 
 3. Selecting and buidling the Model
 
-Since the target variable in this task is of a categorical binary type; I will choose Logistic regression (a suprevised classification algorithm)
-to help predict the impact of each variable on the odds ratio of the observed event of interest which is risk for CVD.
+Since the target variable in this task is of a categorical binary type; I will choose Logistic regression (a suprevised classification algorithm)to help predict the impact of each variable on the odds ratio of the observed event of interest which is risk for CVD.
 
 Logistic regression is a linear method, but the predictions are transformed using the logistic function. 
 
 p(X) = e^(b0 + b1*X) / (1 + e^(b0 + b1*X))
+
+![](ScreenShot13.png)
 
 3.1 Feature encoding
 
