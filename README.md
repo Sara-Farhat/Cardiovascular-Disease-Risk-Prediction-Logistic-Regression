@@ -1,6 +1,6 @@
-# Heart Attack Risk Analysis Prediction Using Logistic Regression
+# CVD Risk Analysis & Prediction Using Logistic Regression
 
-#### Machine learning enhances preventive care
+#### Machine learning enhances preventive care in cardiovascular medicine
 
 
 Sara Farhat  Oct 14,2021
@@ -27,7 +27,7 @@ Heart disease is the leading cause of death for men, women, and people of most r
 One person dies every 36 seconds in the United States from cardiovascular disease.
 Heart disease costs the United States about $363 billion each year from 2016 to 2017. This includes the cost of health care services, medicines, and lost productivity due to death.
 
-Therefore, it is important to detect cardiovascular disease as early as possible so that management with counselling and medicines can begin.
+Therefore, it is important to detect cardiovascular disease as early as possible so that management with counselling and medicine can begin.
 
 But, it can be difficult to identify high risk CVD patients due to the multi-factorial nature of risk factors.This is where machine learning models can be used to help in early detection of high risk patients.
 
@@ -95,9 +95,11 @@ The scatterplot helps us easily identify categorical vs continuous variables.
 
 
 Variables: Age, sex, chest pain, resting electrocardiogram, slope pf peak exercise ST, number of major vessels colored by fluoroscopy,exercise induced angina, Thalassemia, fasting blood glucose, serum cholesterol,ST depression induced by exercise and maximum heart rate achieved are associated with an increased/decreased risk for CVD.
-The association with risk differs between males and females, as we shall see. 
 
 Whereas, resting blood pressure doesn't present with an association to and increased or decrease CVD risk. 
+
+I should note that, with further analysis,the association with CVD risk appeared to differ between males and females.
+
 
 To get more accurate insights, I analyzed different variables:
 - wrt target variable
