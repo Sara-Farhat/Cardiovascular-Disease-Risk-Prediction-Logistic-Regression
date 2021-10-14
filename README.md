@@ -124,17 +124,18 @@ I was able to conclude based on my EDA:
 
 ![](CVDViz/ScreenShot4.png)
 
-. Both male and female patinets with a downward ST-slope presented with an increased risk for CVD; highest in female patients.
+. Both male and female patients with a downward ST-slope presented with an increased risk for CVD; highest in female patients.
 
-![](CVDViz/CVDVizScreenShot5.png) 
+![](ScreenShot5.png) 
 
-![](CVDViz/CVDVizScreenShot6.png)
+![](ScreenShot6.png)
 
 . Patients with resting blood pressure between 120 and 140 / mm Hg, surprisingly, presented with both high and low risk for CVD.
-img
-This shows how complicated the detection of patients that are at an increased risk for developing heart disease in order to prevent further complications.
+![](ScreenShot10.png)
 
-There are many players that contribute to increasing the risk. Machine learning can help in predicting CVD risk while taking into consideration all these interconnected variables.
+*This shows how complicated the detection of patients that are at an increased risk for developing heart disease in order to prevent further complications.
+
+*There are many players that contribute to increasing the risk. Machine learning can help in predicting CVD risk while taking into consideration all these interconnected variables.
 
 3. Selecting and buidling the Model
 
@@ -175,7 +176,8 @@ Now, that the prediction is over.
 
 I will use the Confusion Matrix to evaluate the performance of my model.
 
-img
+![](ScreenShot11.png)
+
 
 From the CM, I can tell that the model resulted in 55 correct predictions and 6 incorrect ones.
 
@@ -189,7 +191,7 @@ Then, I evaluated the model using accuracy, F1 SCORE, recall score and precision
 
 - Precision is the proportion of positive identifications that were classified correctly by model.
 
-img 
+![](ScreenShot12.png)
 
 As a conclusion, the Logistic Regression model's performance was great at predicting risk for CVD.
 
@@ -198,6 +200,9 @@ As a conclusion, the Logistic Regression model's performance was great at predic
 
 As a conclusion, the Logistic Regression model's performance was great at predicting risk for CVD by using the 14 attributes.
 
+A provider can input values corresponding to the 14 attributes, into the model and predict whether his/her patient is at risk for developing CVD. This can help the provider to start the right treatment for the right patient to prevent any further complications, taking into consideration the time-sensitive nature of heart disease complications such as stroke,cardiac arrythmia, heart failure, MI,etc.
+
+Machine learning can help us improve our healthcare outcomes, improve quality of life and cut unnecessary costs that burden our system.
 
 Thank you for reading.
 
