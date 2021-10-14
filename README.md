@@ -3,7 +3,9 @@
 #### Machine learning enhances preventive care in cardiovascular medicine
 
 
-Sara Farhat              Oct 14,2021
+Sara Farhat 
+
+Oct 14,2021      
 
 
 
@@ -33,7 +35,6 @@ But, it can be difficult to identify high risk CVD patients due to the multi-fac
 
 In this article, I will be analyzing several contributory risk factors to predict whether a patient is at a high risk for developing CVD using Logistic Regression on UCI Health dataset.
 
-The code for this article can be found in my GitHub Repository: https://github.com/Sara-Farhat/Cardiovascular-Disease-Risk-Prediction-Logistic-Regression
 
 ## 2.Data Set Description
 
@@ -67,8 +68,6 @@ This database contains 76 attributes, but all published experiments refer to usi
 - target : 0 = There's a lower chance of heart attack , 1 = There's a higher chance of heart attack
 
 
-
-
 ## Documentation
 
 For the full code, please refer to the link below. All code was created and implemented in a Python Jupyter Notebook.
@@ -96,9 +95,7 @@ The scatterplot helps us easily identify categorical vs continuous variables.
 
 Variables: Age, sex, chest pain, resting electrocardiogram, slope pf peak exercise ST, number of major vessels colored by fluoroscopy,exercise induced angina, Thalassemia, fasting blood glucose, serum cholesterol,ST depression induced by exercise and maximum heart rate achieved are associated with an increased/decreased risk for CVD.
 
-Whereas, resting blood pressure doesn't present with an association to and increased or decrease CVD risk. 
-
-I should note that, with further analysis,the association with CVD risk appeared to differ between males and females.
+Whereas, resting blood pressure didn't present with an association to an increased or decreased CVD risk. 
 
 
 To get more accurate insights, I analyzed different variables:
@@ -115,6 +112,7 @@ I was able to conclude based on my EDA:
  
 
 . Patients older than 40 years old presented with a higher risk for CVD irrespective of sex.
+![](ScreenShot14.png)
 
 
 . Female patients with a fbs < 120 mg/dl presented with a high risk for CVD !!
@@ -122,7 +120,7 @@ I was able to conclude based on my EDA:
 
 ![](CVDViz/ScreenShot3.png)
 
-. Both male and female patients with no exercise induced angina presented with an increased risk for CVD.
+. Both male and female patients with no exercise induced angina presented with an increased risk for CVD; highest in female patients.
 
 ![](CVDViz/ScreenShot4.png)
 
@@ -135,7 +133,9 @@ I was able to conclude based on my EDA:
 . Patients with resting blood pressure between 120 and 140 / mm Hg, surprisingly, presented with both high and low risk for CVD.
 ![](ScreenShot10.png)
 
-*This shows how complicated the detection of patients that are at an increased risk for developing heart disease in order to prevent further complications.
+I can conclude as well, that the association between some of the variables and an increased CVD risk seemed to be stronger in female patients. 
+
+*This shows that the detection of increased risk for developing heart disease in patients is a  complicated task. 
 
 *There are many players that contribute to increasing the risk. Machine learning can help in predicting CVD risk while taking into consideration all these interconnected variables.
 
@@ -151,19 +151,19 @@ p(X) = e^(b0 + b1*X) / (1 + e^(b0 + b1*X))
 
 3.1 Feature encoding
 
-Where I encoded the categorical columns by creating dummy variables.
+I started by creating a copy of the dataset. Then, I encoded the categorical columns by creating dummy variables.
 
 3.2 Feature Selection
 
-Where I then, selected the input and output features.
+I then, selected the input and output features.
 
 3.3 Splitting Data
 
-Where I split the data for training and testing purposes. I took 80% of the data to use it to train my LR model and then test it on the remaining 20%.
+I split the data for training and testing purposes. I took 80% of the data to use it to train my LR model and then test it on the remaining 20%.
 
 3.4 Feature scaling
 
-Where I scaled the continuous features, using RobustScaler , to treat for possible outliers that may affect the performance of my model.
+I,then, scaled the continuous features, using RobustScaler , to treat for possible outliers that may affect the performance of my model.
 
 3.5 Model Fitting
 
@@ -171,20 +171,21 @@ Now, my model is ready for fitting.
 
 I instantiated the model using the default parameters.
 
-I fiited the model on my training data to predict the labels of of the test data.
+I fitted the model on my training data to predict the labels of the test data.
 
 4. Model Evaluation
 
 Now, that the prediction is over.
 
-I will use the Confusion Matrix to evaluate the performance of my model.
+I used the Confusion Matrix to evaluate the performance of my model.
 
 ![](ScreenShot11.png)
 
 
-From the CM, I can tell that the model resulted in 55 correct predictions and 6 incorrect ones.
+The CM shows that the model resulted in 55 correct predictions and 6 incorrect ones.
 
-Then, I evaluated the model using accuracy, F1 SCORE, recall score and precision.
+
+For further model evaluation, I used these commonly used metrics for LR model evaluation: accuracy, F1 SCORE, recall score and precision.
 
 - Accuracy of a model is the proportion of predictions that the model classified correctly. Which is 90.16% for our model;90% of predictions are classified correctly.
 
@@ -196,16 +197,31 @@ Then, I evaluated the model using accuracy, F1 SCORE, recall score and precision
 
 ![](ScreenShot12.png)
 
-As a conclusion, the Logistic Regression model's performance was great at predicting risk for CVD.
+Hence,the Logistic Regression model's performance was great at predicting risk for CVD.
 
 
 # Conclusion
 
 As a conclusion, the Logistic Regression model's performance was great at predicting risk for CVD by using the 14 attributes.
 
-A provider can input values corresponding to the 14 attributes, into the model and predict whether his/her patient is at risk for developing CVD. This can help the provider to start the right treatment for the right patient to prevent any further complications, taking into consideration the time-sensitive nature of heart disease complications such as stroke,cardiac arrythmia, heart failure, MI,etc.
+A provider can input values corresponding to each of the 14 attributes, into the model and predict whether his/her patient is at risk for developing CVD. This can help the provider to start the right treatment for the right patient to prevent any further complications, taking into consideration the time-sensitive nature of heart disease complications such as stroke,cardiac arrythmia, heart failure, MI,etc.
 
-Machine learning can help us improve our healthcare outcomes, improve quality of life and cut unnecessary costs that burden our system.
+This project is an example of how machine learning can help us: 
+. improve healthcare operations
+. improve healthcare outcomes 
+. improve quality of life 
+. cut unnecessary costs that burden our system.
+
+# Dashboard for CVD Risk Prediction
+
+Using Tableau Public, I was able to create an interactive dashboard that predicts CVD risk according to different variables. 
+
+
+The link to the dashboard: https://public.tableau.com/app/profile/sara.farhat8454/viz/CVDRiskAnalysis/Dashboard2
+
+
+![](CVDRiskAnalysisTableau.png)
+
 
 Thank you for reading.
 
