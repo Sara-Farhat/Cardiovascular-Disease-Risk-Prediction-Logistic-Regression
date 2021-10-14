@@ -90,14 +90,12 @@ There were no missing variables. There was 1 duplicate entry that I dropped.
 
 First, I checked the distribution of different variables with respect to the target variable using a scatterplot heat matrix. 
 The scatterplot helps us easily identify categorical vs continuous variables.
+![](CVDViz/ScreenShot7.png)
+
 Variables: Age, sex, chest pain, resting electrocardiogram, slope pf peak exercise ST, number of major vessels colored by fluoroscopy,exercise induced angina, Thalassemia, fasting blood glucose, serum cholesterol,ST depression induced by exercise and maximum heart rate achieved are associated with an increased/decreased risk for CVD.
 The association with risk differs between males and females, as we shall see. 
 
 Whereas, resting blood pressure doesn't present with an association to and increased or decrease CVD risk. 
-
-
-![](CVDViz/ScreenShot7.png)
-
 
 To get more accurate insights, I analyzed different variables:
 - wrt target variable
