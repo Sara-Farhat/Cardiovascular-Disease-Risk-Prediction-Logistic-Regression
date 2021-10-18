@@ -18,6 +18,8 @@ Oct 14,2021
 
 ## 1.Introduction
 
+### Aim: In this article, I will be analyzing several contributory risk factors to predict whether a patient is at a high risk for developing CVD using Logistic Regression on the UCI Health dataset.
+
 Globally
 
 Cardiovascular diseases (CVDs) are the leading cause of death globally.
@@ -33,7 +35,7 @@ Therefore, it is important to detect cardiovascular disease as early as possible
 
 But, it can be difficult to identify high risk CVD patients due to the multi-factorial nature of risk factors.This is where machine learning models can be used to help in early detection of high risk patients.
 
-In this article, I will be analyzing several contributory risk factors to predict whether a patient is at a high risk for developing CVD using Logistic Regression on UCI Health dataset.
+
 
 
 ## 2.Data Set Description
