@@ -63,7 +63,7 @@ This database contains 76 attributes, but all published experiments refer to usi
 - ca : number of major vessels (0-3) colored by flourosopy
 - thal : 3 = normal; 6 = fixed defect; 7 = reversable defect
 
-##### For more explanation regarding the variables please refer to this link: 
+##### For more explanation regarding the variables please refer to the below link research study: 
 
 https://www.mdpi.com/2076-3417/11/18/8352/pdf
 
