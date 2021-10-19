@@ -110,6 +110,7 @@ The scatterplot helps us easily identify categorical vs continuous variables.
 ![](ScreenShot7.png)
 
 
+
 ## Preliminary Observations:
 
 . The heat matrix shows that 13 out of the 14 variables presented with increased/decreased risk for CVD.
@@ -134,14 +135,16 @@ I created very interesting visualizations using:
 
 #### Distribution of population in dataset by Sex
 
- ![](CVDViz/ScreenShot15.png)
+ ![](ScreenShot15.png)
+ 
  
 
 . The dataset constitutes mostly of males; around 200 male patients and 100 female patients.
 
 #### CVD Risk by Sex
 
-![](CVDViz/ScreenShot16.png)
+![](ScreenShot16.png)
+
 
 . Within the female patient population: the majority of females presented with high risk for CVD
 
@@ -149,7 +152,8 @@ I created very interesting visualizations using:
 
 #### CVD Risk by Sex and Age
 
-![](CVDViz/ScreenShot17.png)
+![](ScreenShot17.png)
+
 
 . Within the "female" patient population:
  
@@ -166,7 +170,8 @@ I created very interesting visualizations using:
 
 #### CVD Risk by Fasting Blood Sugar 
 
-![](CVDViz/ScreenShot18.png)
+![](ScreenShot18.png)
+
 
 . From the patients who presented with a high risk for CVD; the majority have a
   fasting blood sugar < 120mg/dl. (read note below)
@@ -181,7 +186,7 @@ expected according to domain knowledge).
 
  Exercise Induced Angina presents as chest pain during exercise.
  
-![](CVDViz/ScreenShot19.png)
+![](ScreenShot19.png)
 
 
 .From the patients who presented with a high risk for CVD; the majority had no angina during exercising.
@@ -189,7 +194,7 @@ expected according to domain knowledge).
 
 #### CVD Risk by ST-Slope
 
-![](CVDViz/ScreenShot6.png)
+![](ScreenShot6.png)
 
 . A downward ST-Slope presented with the highest risk for CVD. (As expected according to domain knowledge)
 
