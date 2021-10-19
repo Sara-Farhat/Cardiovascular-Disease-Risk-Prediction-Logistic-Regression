@@ -1,4 +1,4 @@
-# CVD Risk Analysis & Prediction Using Logistic Regression
+# Cardiovascular Disease Risk Analysis & Prediction Using Logistic Regression
 
 #### Machine learning enhances preventive care in cardiovascular medicine
 
@@ -20,12 +20,12 @@ Oct 14,2021
 
 ### Aim: In this article, I will be analyzing several contributory risk factors to predict whether a patient is at a high risk for developing CVD using Logistic Regression on the UCI Health dataset.
 
-Globally
+### Globally
 
 Cardiovascular diseases (CVDs) are the leading cause of death globally.
 An estimated 17.9 million people died from CVDs in 2019, representing 32% of all global deaths. 
 
-United States
+### United States
 
 Heart disease is the leading cause of death for men, women, and people of most racial and ethnic groups in the United States.
 One person dies every 36 seconds in the United States from cardiovascular disease.
@@ -35,7 +35,15 @@ Therefore, it is important to detect cardiovascular disease as early as possible
 
 But, it can be difficult to identify high risk CVD patients due to the multi-factorial nature of risk factors.This is where machine learning models can be used to help in early detection of high risk patients.
 
+# Dashboard for CVD Risk Prediction
 
+Using Tableau Public, I was able to create an interactive dashboard that displays the CVD risk according to different variables. 
+
+
+The link to the dashboard: https://public.tableau.com/app/profile/sara.farhat8454/viz/CVDRiskAnalysis/Dashboard2
+
+
+![](CVDRiskAnalysisTableau.png)
 
 
 ## 2.Data Set Description
@@ -218,15 +226,6 @@ This project is an example of how machine learning can help us:
 . improve quality of life 
 . cut unnecessary costs that burden our system.
 
-# Dashboard for CVD Risk Prediction
-
-Using Tableau Public, I was able to create an interactive dashboard that predicts CVD risk according to different variables. 
-
-
-The link to the dashboard: https://public.tableau.com/app/profile/sara.farhat8454/viz/CVDRiskAnalysis/Dashboard2
-
-
-![](CVDRiskAnalysisTableau.png)
 
 
 Thank you for reading.
