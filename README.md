@@ -212,7 +212,7 @@ expected according to domain knowledge).
 
 *There are many players that contribute to increasing the risk. Machine learning can help in predicting CVD risk while taking into consideration all these interconnected variables.
 
-# Selecting and buidling the Model
+# Selecting and building the Model
 
 Since the target variable in this task is of a categorical binary type; I will choose Logistic regression (a suprevised classification algorithm)to help predict the impact of each variable on the odds ratio of the observed event of interest which is risk for CVD.
 
