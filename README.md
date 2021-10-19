@@ -27,9 +27,11 @@ An estimated 17.9 million people died from CVDs in 2019, representing 32% of all
 
 ### United States
 
-Heart disease is the leading cause of death for men, women, and people of most racial and ethnic groups in the United States.
-One person dies every 36 seconds in the United States from cardiovascular disease.
-Heart disease costs the United States about $363 billion each year from 2016 to 2017. This includes the cost of health care services, medicines, and lost productivity due to death.
+.Heart disease is the leading cause of death for men, women, and people of most racial and ethnic groups in the United States.
+
+. One person dies every 36 seconds in the United States from cardiovascular disease.
+
+. Heart disease costs the United States about $363 billion each year from 2016 to 2017. This includes the cost of health care services, medicines, and lost productivity due to death.
 
 Therefore, it is important to detect cardiovascular disease as early as possible so that management with counselling and medicine can begin.
 
@@ -73,13 +75,14 @@ This database contains 76 attributes, but all published experiments refer to usi
 - ca : number of major vessels (0-3) colored by flourosopy
 - thal : 3 = normal; 6 = fixed defect; 7 = reversable defect
 
-##### For more explanation regarding the variables please refer to the below research study: 
-
-https://www.mdpi.com/2076-3417/11/18/8352/pdf
-
 #### Target variable to be predicted
 
 - target : 0 = There's a lower chance of heart attack , 1 = There's a higher chance of heart attack
+
+
+##### For more explanation regarding the variables please refer to the below research study: 
+
+https://www.mdpi.com/2076-3417/11/18/8352/pdf
 
 
 ## Documentation
@@ -107,53 +110,102 @@ The scatterplot helps us easily identify categorical vs continuous variables.
 ![](ScreenShot7.png)
 
 
-Variables: Age, sex, chest pain, resting electrocardiogram, slope pf peak exercise ST, number of major vessels colored by fluoroscopy,exercise induced angina, Thalassemia, fasting blood glucose, serum cholesterol,ST depression induced by exercise and maximum heart rate achieved are associated with an increased/decreased risk for CVD.
+## Preliminary Observations:
 
-Whereas, resting blood pressure didn't present with an association to an increased or decreased CVD risk. 
+. The heat matrix shows that 13 out of the 14 variables presented with increased/decreased risk for CVD.
+
+. Whereas, the only variable (resting blood pressure) didn't present with an increased or decreased CVD risk. 
 
 
-To get more accurate insights, I analyzed different variables:
-- wrt target variable
-- wrt Age
-- wrt sex
+#### To gain more accurate insights, I analyzed the data with respect to :
 
-I created very interesting visualizations using Plotly Express package.
+- Risk for CVD (target variable)
+- Age
+- Sex
 
-I was able to conclude based on my EDA: 
+I created very interesting visualizations using:
 
-. Female patients in this dataset presented with a higher risk for CVD than men.
- ![](CVDViz/ScreenShot2.png)
+.Plotly Express Package
+
+.Seaborn Package
+
+
+## Visualizations
+
+#### Distribution of population in dataset by Sex
+
+ ![](CVDViz/ScreenShot15.png)
  
 
-. Patients older than 40 years old presented with a higher risk for CVD irrespective of sex.
-![](ScreenShot14.png)
+. The dataset constitutes mostly of males; around 200 male patients and 100 female patients.
+
+#### CVD Risk by Sex
+
+![](CVDViz/ScreenShot16.png)
+
+. Within the female patient population: the majority of females presented with high risk for CVD
+
+. Within the male patient population: the majority of males presented with low risk for CVD
+
+#### CVD Risk by Sex and Age
+
+![](CVDViz/ScreenShot17.png)
+
+. Within the "female" patient population:
+ 
+ 1- Patients who presented with high risk for CVD are of ages ranging between 47 and 62. 
+ 
+ 2- Patients who presented with low risk for CVD are of ages ranging between 58 and 61.
+
+.Within the "male" patient population:
+
+1- Patients who presented with high risk for CVD are of ages ranging between 43 and 57.
+
+2- Patients who presented with low risk for CVD are of ages ranging between 51 and 61.
 
 
-. Female patients with a fbs < 120 mg/dl presented with a high risk for CVD !!
+#### CVD Risk by Fasting Blood Sugar 
+
+![](CVDViz/ScreenShot18.png)
+
+. From the patients who presented with a high risk for CVD; the majority have a
+  fasting blood sugar < 120mg/dl. (read note below)
+  
+. From the patients who presented with a low risk for CVD; the majority have a fbs<120mg/dl (which is
+expected according to domain knowledge).
+  
+  #### Note: A fasting blood sugar level from 100 to 125 mg/dL is considered prediabetes. The cut off used  in this dataset is 120 mg/dl; this doesn't tell us if the patient is non-diabetic or pre-diabetic. A third cut off for fasting blood sugar is needed to solve for that. 
+  
+
+#### CVD Risk by Exercise Induced Angina
+
+ Exercise Induced Angina presents as chest pain during exercise.
+ 
+![](CVDViz/ScreenShot19.png)
 
 
-![](CVDViz/ScreenShot3.png)
+.From the patients who presented with a high risk for CVD; the majority had no angina during exercising.
 
-. Both male and female patients with no exercise induced angina presented with an increased risk for CVD; highest in female patients.
 
-![](CVDViz/ScreenShot4.png)
+#### CVD Risk by ST-Slope
 
-. Both male and female patients with a downward ST-slope presented with an increased risk for CVD; highest in female patients.
+![](CVDViz/ScreenShot6.png)
 
-![](ScreenShot5.png) 
+. A downward ST-Slope presented with the highest risk for CVD. (As expected according to domain knowledge)
 
-![](ScreenShot6.png)
+ 
+#### CVD Risk by Resting Blood Pressure
 
-. Patients with resting blood pressure between 120 and 140 / mm Hg, surprisingly, presented with both high and low risk for CVD.
 ![](ScreenShot10.png)
 
-I can conclude as well, that the association between some of the variables and an increased CVD risk seemed to be stronger in female patients. 
+. Patients with resting blood pressure between 120 and 140 / mm Hg, surprisingly, presented with both high and low risk for CVD. This supports my preminilary observation made using the heatmap at the beginning of the article: resting blood pressure didn't present with an increased or decreased CVD risk. 
 
-*This shows that the detection of increased risk for developing heart disease in patients is a  complicated task. 
+
+*The above analysis shows that the detection of increased risk for developing heart disease in patients is a complicated task. 
 
 *There are many players that contribute to increasing the risk. Machine learning can help in predicting CVD risk while taking into consideration all these interconnected variables.
 
-3. Selecting and buidling the Model
+## Selecting and buidling the Model
 
 Since the target variable in this task is of a categorical binary type; I will choose Logistic regression (a suprevised classification algorithm)to help predict the impact of each variable on the odds ratio of the observed event of interest which is risk for CVD.
 
@@ -161,25 +213,24 @@ Logistic regression is a linear method, but the predictions are transformed usin
 
 p(X) = e^(b0 + b1*X) / (1 + e^(b0 + b1*X))
 
-![](ScreenShot13.png)
 
-3.1 Feature encoding
+1. Feature encoding
 
 I started by creating a copy of the dataset. Then, I encoded the categorical columns by creating dummy variables.
 
-3.2 Feature Selection
+2. Feature Selection
 
 I then, selected the input and output features.
 
-3.3 Splitting Data
+3. Splitting Data
 
 I split the data for training and testing purposes. I took 80% of the data to use it to train my LR model and then test it on the remaining 20%.
 
-3.4 Feature scaling
+4. Feature scaling
 
 I,then, scaled the continuous features, using RobustScaler , to treat for possible outliers that may affect the performance of my model.
 
-3.5 Model Fitting
+5. Model Fitting
 
 Now, my model is ready for fitting.
 
@@ -187,7 +238,7 @@ I instantiated the model using the default parameters.
 
 I fitted the model on my training data to predict the labels of the test data.
 
-4. Model Evaluation
+6. Model Evaluation
 
 Now, that the prediction is over.
 
