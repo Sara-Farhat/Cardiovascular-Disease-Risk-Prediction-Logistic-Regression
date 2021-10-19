@@ -16,7 +16,7 @@ Oct 14,2021
   
 
 
-## 1.Introduction
+# 1.Introduction
 
 ### Aim: In this article, I will be analyzing several contributory risk factors to predict whether a patient is at a high risk for developing CVD using Logistic Regression on the UCI Health dataset.
 
@@ -48,7 +48,7 @@ The link to the dashboard: https://public.tableau.com/app/profile/sara.farhat845
 ![](CVDRiskAnalysisTableau.png)
 
 
-## 2.Data Set Description
+# 2.Data Set Description
 
 This dataset is from UCI Health dataset found publicly on Kaggle. 
 
@@ -133,7 +133,9 @@ I created very interesting visualizations using:
 
 ## Visualizations
 
-#### Distribution of population in dataset by Sex
+
+## Distribution of population in dataset by Sex
+
 
  ![](ScreenShot15.png)
  
@@ -141,7 +143,7 @@ I created very interesting visualizations using:
 
 . The dataset constitutes mostly of males; around 200 male patients and 100 female patients.
 
-#### CVD Risk by Sex
+## CVD Risk by Sex
 
 ![](ScreenShot16.png)
 
@@ -150,7 +152,7 @@ I created very interesting visualizations using:
 
 . Within the male patient population: the majority of males presented with low risk for CVD
 
-#### CVD Risk by Sex and Age
+## CVD Risk by Sex and Age
 
 ![](ScreenShot17.png)
 
@@ -168,7 +170,7 @@ I created very interesting visualizations using:
 2- Patients who presented with low risk for CVD are of ages ranging between 51 and 61.
 
 
-#### CVD Risk by Fasting Blood Sugar 
+## CVD Risk by Fasting Blood Sugar 
 
 ![](ScreenShot18.png)
 
@@ -182,7 +184,7 @@ expected according to domain knowledge).
   #### Note: A fasting blood sugar level from 100 to 125 mg/dL is considered prediabetes. The cut off used  in this dataset is 120 mg/dl; this doesn't tell us if the patient is non-diabetic or pre-diabetic. A third cut off for fasting blood sugar is needed to solve for that. 
   
 
-#### CVD Risk by Exercise Induced Angina
+## CVD Risk by Exercise Induced Angina
 
  Exercise Induced Angina presents as chest pain during exercise.
  
@@ -192,14 +194,14 @@ expected according to domain knowledge).
 .From the patients who presented with a high risk for CVD; the majority had no angina during exercising.
 
 
-#### CVD Risk by ST-Slope
+## CVD Risk by ST-Slope
 
 ![](ScreenShot6.png)
 
 . A downward ST-Slope presented with the highest risk for CVD. (As expected according to domain knowledge)
 
  
-#### CVD Risk by Resting Blood Pressure
+## CVD Risk by Resting Blood Pressure
 
 ![](ScreenShot10.png)
 
@@ -210,7 +212,7 @@ expected according to domain knowledge).
 
 *There are many players that contribute to increasing the risk. Machine learning can help in predicting CVD risk while taking into consideration all these interconnected variables.
 
-## Selecting and buidling the Model
+# Selecting and buidling the Model
 
 Since the target variable in this task is of a categorical binary type; I will choose Logistic regression (a suprevised classification algorithm)to help predict the impact of each variable on the odds ratio of the observed event of interest which is risk for CVD.
 
@@ -219,23 +221,23 @@ Logistic regression is a linear method, but the predictions are transformed usin
 p(X) = e^(b0 + b1*X) / (1 + e^(b0 + b1*X))
 
 
-1. Feature encoding
+### 1. Feature encoding
 
 I started by creating a copy of the dataset. Then, I encoded the categorical columns by creating dummy variables.
 
-2. Feature Selection
+### 2. Feature Selection
 
 I then, selected the input and output features.
 
-3. Splitting Data
+### 3. Splitting Data
 
 I split the data for training and testing purposes. I took 80% of the data to use it to train my LR model and then test it on the remaining 20%.
 
-4. Feature scaling
+### 4. Feature scaling
 
 I,then, scaled the continuous features, using RobustScaler , to treat for possible outliers that may affect the performance of my model.
 
-5. Model Fitting
+### 5. Model Fitting
 
 Now, my model is ready for fitting.
 
@@ -243,7 +245,7 @@ I instantiated the model using the default parameters.
 
 I fitted the model on my training data to predict the labels of the test data.
 
-6. Model Evaluation
+### 6. Model Evaluation
 
 Now, that the prediction is over.
 
